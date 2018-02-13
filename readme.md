@@ -1,4 +1,4 @@
-# https://github.com/Bluebeam/primesample-cs.gitSession Roundtripper Sample
+# Session Roundtripper Sample
 
 ## Resources
 
