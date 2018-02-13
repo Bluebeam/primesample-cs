@@ -1,0 +1,43 @@
+@{// Copyright (c) Bluebeam Inc. All rights reserved.
+//
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+}
+
+@model CreateModel
+@{
+   ViewData["Title"] = "Create Session";
+}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Session Roundtripper - Markup & Finish</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body style="margin: 25px;">
+	<div class="page-header">
+		<h1>Markup & Finish</h1>
+	</div>
+	<p>
+		The session <strong>@Model.SessionName</strong> has been created with ID <strong>@Model.SessionID</strong>. You may now go into Revu and markup your file. Click 'Finish Session' when you are ready.
+	</p>
+  <div class="panel">
+		<div class="panel-body">
+		<small class="text-muted">SESSION LINK</small>
+			<div class="well">
+				<a href="https://studio.bluebeam.com/join.html?ID=@Model.SessionID" target="_blank">@Model.SessionName</a>
+			</div>
+		</div>
+	</div>
+	<form action="/finish" method="POST">
+		<div class="form-group">
+			<input type="hidden" name="sessionId" value="@Model.SessionID">
+			<input type="hidden" name="projectId" value="@Model.ProjectID">
+			<input type="hidden" name="fileSessionId" value="@Model.FileSessionID">
+			<input type="hidden" name="fileProjectId" value="@Model.FileProjectID">
+			<input class="btn btn-primary" type="submit" value="Finish Session">
+		</div>
+	</form>
+</body>
+</html>

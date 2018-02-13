@@ -1,0 +1,124 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>aspnet-sessionroundtripper_cs-B0AB5444-4522-426B-BE18-0854625D268B</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Extensions\UrlHelperExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Manage\ChangePassword.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Manage\Disable2fa.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Manage\EnableAuthenticator.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Manage\ExternalLogins.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Manage\GenerateRecoveryCodes.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Manage\ResetAuthenticator.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Manage\SetPassword.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Manage\TwoFactorAuthentication.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Home\About.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Home\Contact.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Account\AccessDenied.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Account\ConfirmEmail.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Account\ExternalLogin.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Account\ForgotPassword.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Account\ForgotPasswordConfirmation.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Account\Lockout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Account\LoginWith2fa.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Account\LoginWithRecoveryCode.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Account\Register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Account\ResetPassword.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Account\ResetPasswordConfirmation.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Account\SignedOut.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\AccountViewModels\ForgotPasswordViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\AccountViewModels\LoginWith2faViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\AccountViewModels\LoginWithRecoveryCodeViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\AccountViewModels\RegisterViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\AccountViewModels\ResetPasswordViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\ManageViewModels\ChangePasswordViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\ManageViewModels\EnableAuthenticatorViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\ManageViewModels\ExternalLoginsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\ManageViewModels\GenerateRecoveryCodesViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\ManageViewModels\RemoveLoginViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\ManageViewModels\SetPasswordViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\ManageViewModels\TwoFactorAuthenticationViewModel.cs" />
+  </ItemGroup>
+</Project>

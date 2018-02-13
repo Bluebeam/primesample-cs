@@ -1,0 +1,48 @@
+﻿@{// Copyright (c) Bluebeam Inc. All rights reserved.
+  //
+  // Licensed under the MIT License. See LICENSE in the project root for license information.
+}
+
+@model UserModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+<div class="page-header">
+		<h1>Create Session</h1>
+	</div>
+	<p>
+	You are authorized as @Model.UserName
+	</p>
+	<form action="/create" method="post" enctype="multipart/form-data">
+		<div class="form-group">
+			<select class="form-control" name="project" required>
+        @foreach (var project in Model.Projects) {
+					<option value="@project.Id">@project.Name</option>
+        }
+			</select>
+		</div>
+		<div class="form-group">
+			<input class="form-control" type="text" name="session" placeholder="Session Name" required>
+		</div>
+		<div class="form-group">
+			<div class="input-group">
+				<label class="input-group-btn">
+					<span class="btn btn-file btn-default">Browse&hellip; 
+						<input name="sessionFile" type="file" accept=".pdf" required>
+					</span>
+				</label>
+				<input type="text" class="form-control" readonly>
+			</div>
+			<span class="help-block">
+				Browse for the PDF file to upload into the new session
+			</span>
+		</div>
+		<div class="form-group">
+			<input class="btn btn-primary" type="submit" value="Create Session">
+		</div>
+	</form>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="script.js"></script>
+</div>
